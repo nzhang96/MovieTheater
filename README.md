@@ -1,2 +1,4 @@
 # MovieTheater
-Client/server program that connects to a database. Created with MySQL and Flask.
+Client/server program that connects to a database and runs on the internet. 
+Created with MySQL and Flask.
+
