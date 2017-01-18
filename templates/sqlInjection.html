@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Profile</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/customer">Customer</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Choose your name to see your full profile</h3>
+      </div>
+
+
+
+<div class="container">
+  <p>My Information:</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>Sex</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in users %}
+      <tr>
+      {% for d in row %}
+          <td>{{ d }}</td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+

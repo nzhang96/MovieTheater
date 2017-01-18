@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Movie</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/staff">Staff</a></li>
+            <li role="presentation" ><a href="/movies">Movies</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Add a movie</h3>
+      </div>
+
+
+
+
+ <form action="/add_movie" method="post">
+    <p1>Enter the name and release year to insert it into database:</p1>
+	<br>
+	<pre> 
+Movie Name:   <input type="text" name="movie_name" value="Star Warss"><br>
+Release Year: <input type="text" name="movie_year" value="2015"><br>
+
+    <p1>Enter the movie poster image url:</p1>
+    <input type="text" name="Poster" value="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"><br>
+		
+    <input type="submit" value="Submit">
+	</pre>
+ </form>
+ 
+ <a href="/movies">Cancel</a> 

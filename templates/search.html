@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Showing Search Results</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/customer">Customer</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Showing Search Results</h3>
+      </div>
+
+
+
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <p>My Information:</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Showing ID</th>
+        <th>Date/Time</th>
+        <th>MovieID</th>
+        <th>Movie Name</th>
+        <th>Room Number</th>
+        <th>Ticket Price</th>
+        <th>Poster</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+      <tr>
+      {% for d in row %}
+          {% if row[6] == d %}
+            <img class="media-object" src="{{d}}" height="240" width="360">
+          {% else %}
+            <td>{{ d }}</td>
+          {% endif %}
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  
+
+</div>
+
+
+<div class="media">
+  <div class="media-center">
+    <a href="#">
+    <h1> {{ moviename }} </h1>
+      <img class="media-object" src="{{poster}}" height="240" width="360">
+    </a>
+  </div>
+  <div class="media-body">
+  </div>
+
+
+
+
+</body>
+</html>

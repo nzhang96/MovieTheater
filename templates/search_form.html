@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search Showing</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/customer">Customer</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Search All Showings</h3>
+      </div>
+
+
+
+<form action="/search_info" method="post">
+<pre>
+     Select Genre:
+     <select name="Genre"><br />
+     {% for i in genre %}
+     <option>{{i.0}}</option><br />
+     {% endfor %}
+     </select><br />
+     
+     Select Start Date:
+     <select name="startdate"><br />
+     {% for i in datetime %}
+     <option>{{i.0}}</option><br />
+     {% endfor %}
+     </select><br />
+
+     Select End Date:
+     <select name="enddate"><br />
+     {% for i in datetime %}
+     <option>{{i.0}}</option><br />
+     {% endfor %}
+     </select><br />
+
+
+     Movie Name:<input type="text" name="moviename" value="Star Wars"><br>
+
+    <input type = "checkbox" name = "seatsAvailable" value="1"> Only show results with seats available
+  
+     <button type="submit">Search</button>
+     
+</pre>
+</form>

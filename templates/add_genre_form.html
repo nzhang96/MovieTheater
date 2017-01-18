@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Genre</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/staff">Staff</a></li>
+            <li role="presentation" ><a href="/movies">Genres</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Add a Genre</h3>
+      </div>
+
+
+ <form action="/add_genre" method="post">
+	<pre>
+Genre:    <input type="text" name="genre" value="Fantasy"><br>
+Movie ID: <input type="text" name="movieID" value="10"><br>
+     
+	 <input type="submit" value="Submit">
+	 </pre>
+ </form>
+ 
+ <a href="/genres">Cancel</a> 

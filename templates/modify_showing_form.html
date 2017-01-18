@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Modify Showings</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/staff">Staff</a></li>
+            <li role="presentation" ><a href="/movies">Movies</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Modify a Showing</h3>
+      </div>
+
+
+ <form action="/modify_showing" method="post">
+	<pre>
+Date Change:        <input type="text" name="date_change" value="2016-03-13 19:00:00"><br>
+Movie ID Change:    <input type="text" name="movie_id_change" value="3"><br>
+Room Number Change: <input type="text" name="room_num_change" value="5"><br>
+Price Change:       <input type="text" name="price_change" value="20"><br>
+Showing to Change:  <input type="text" name="id_change" value="7"><br>
+	<input type="submit" value="Submit">
+	</pre>
+ </form>
+ 
+ <a href="/staff_showings">Cancel</a> 

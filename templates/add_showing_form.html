@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Showing</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" ><a href="/staff">Staff</a></li>
+            <li role="presentation" ><a href="/staff_showings">Showings</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Add a Showing</h3>
+      </div>
+
+
+ <form action="/add_showing" method="post">
+	<pre>
+Showing Date and Time: <input type="text" name="showing_date_time" value="2016-02-11 21:30:00"><br>
+Movie ID:              <input type="text" name="movie_id" value="3"><br>
+Theatre Room Number:   <input type="text" name="theatre_room_num" value="2"><br>
+Ticket Price:          <input type="text" name="ticket_price" value="5"><br>
+	 <input type="submit" value="Submit">
+	 </pre>
+ </form>
+ 
+ <a href="/staff_showings">Cancel</a> 
+
+
+
+
+
